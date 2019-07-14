@@ -1,0 +1,22 @@
+<div class="search-container">
+  <input id="seachUser" type="text" placeholder="Search users by Ids, address, name..."[(ngModel)]="searchStr" (blur)="blurSearch()" (ngModelChange)="debouceSearchUser($event)">
+  <div class="result-container" *ngIf="showSearchDropdown">
+    <!-- result card -->
+    <ng-container *ngIf="searchedUser.length">
+      <div class="result-card" id="{{'user' + i}}"
+          [ngClass]="{'selected': i === selectedItemIndex}"
+          (mouseenter)="selectcard(i, 'mouseHover')" (mouseleave)="selectcard(i, 'mouseHLeave')"  *ngFor="let user of searchedUser; let i=index;">
+        <div class="id">{{user.id}}</div>
+        <div class="name">{{user.name}}</div>
+        <div class="items">{{user.items | json}}</div>
+        <div class="address">{{user.address}} {{user.pincode}}</div>
+      </div>
+    </ng-container>
+    <!-- No result card-->
+    <ng-container *ngIf="!searchedUser.length && searchStr">
+      <div class="result-card">
+        No Result Found
+      </div>
+    </ng-container>
+  </div>
+</div>

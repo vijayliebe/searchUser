@@ -1,0 +1,48 @@
+.search-container{
+  
+}
+
+span.highlight {
+  color: #1400ff;
+}
+
+.search-container input{
+  width: 200px;
+  height:25px;
+  padding: 0 0.5em;
+}
+
+.result-container{
+    overflow: scroll;
+    width: 215px;
+    height: 305px;
+}
+
+.result-card{
+  border: 1px solid #000;
+  overflow: scroll;
+}
+
+.result-card.selected{
+  background: #ffffad;
+}
+
+.id{
+ font-weight: bold;
+ padding: 0.5em 0.5em 0;
+}
+.name{
+   font-style: italic;
+   font-size:14px;
+   padding: 0 0.5em;
+}
+.items{
+  font-size:11px;
+  padding: 0 0.5em;
+}
+.address{
+   font-size:10px;
+   padding: 0 0.5em 0.5em;
+}
+
+
